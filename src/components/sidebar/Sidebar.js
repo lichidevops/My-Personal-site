@@ -40,21 +40,23 @@ export default function Sidebar() {
                     <p>Contact</p>
                 </li>
             </Link>
-            <div className='myName'>
-                <p>L</p>
-                <p>I</p>
-                <p>C</p>
-                <p>H</p>
-                <p>I</p>
-            </div>
 
         </ul>
+        <div className='myName'>
+            <p>L</p>
+            <p>I</p>
+            <p>C</p>
+            <p>H</p>
+            <p>I</p>
+        </div>
         <ul className='sidebar-small' hidden>
             <li className='sidebar-item'>1</li>
             <li className='sidebar-item'>2 </li>
             <li className='sidebar-item'>3</li>
             <li className='sidebar-item'>4</li>
         </ul>
+
+        
     </>
   )
 }

@@ -1,6 +1,26 @@
-.contactpage-body {
+.contact-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
     padding: 10px;
-    /* background-color: white; */
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+.contact-sub1 {
+    padding: 10px;
+
+}
+
+.profile-img img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+.profile-img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
 }

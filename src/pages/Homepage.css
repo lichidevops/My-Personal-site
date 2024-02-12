@@ -58,7 +58,8 @@
 .homepage-title{
     color: white;
 }
-.homepage-main{
+.homepage-text-box{
     background-color: #45474B;
     height: 300px;
+    box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }

@@ -17,7 +17,7 @@ export default function Homepage() {
             </div>
         </div>
         <div className='homepage-body'>
-            <div className='homepage-main'>
+            <div className='homepage-text-box'>
                 <div className='homepage-title'>
                     <h3>Hi, I'm <span className='homepage-title-name'>Lichi</span></h3>
                     <h3>Web Developer</h3>
@@ -35,8 +35,8 @@ export default function Homepage() {
                 </div>
             </div>
 
-            <div className='homepage-sidebar'>
-                <ProgressStep />
+            <div className='homepage-text-box'>
+                
             </div>
         </div>
         </div>
