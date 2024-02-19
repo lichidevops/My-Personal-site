@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage.js';
 import ProgressStep from './pages/widgets/ProgressStep.js';
 import Portfolio from './pages/Portfolio.js';
 import ContactPage from './pages/ContactPage.js';
+import AboutPage from './pages/AboutPage.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/portfolio/" element={<Portfolio />} >
           <Route path="ProgressStep" element={<ProgressStep />} />
         </Route>
+        <Route path='/about' element={<AboutPage/>} />
         <Route path='/contact' element={<ContactPage/>} />
       </Routes>
     </BrowserRouter>

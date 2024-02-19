@@ -4,51 +4,47 @@ import HomeIcon from '../icons/HomeIcon';
 import ClipboardIcon from '../icons/ClipboardIcon';
 import AboutIcon from '../icons/AboutIcon';
 import PhoneIcon from '../icons/PhoneIcon';
-import {Link} from 'react-router-dom';
+import {Link,NavLink} from 'react-router-dom';
 
 export default function Sidebar() {
   return (
     <>
         <ul className='sidebar-main'>
-            <Link to={'/'}>
+            <NavLink to={'/'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
                 <li className='sidebar-item'>
                     <div className='sidebar-icon'>
                         <HomeIcon />
                     </div>
                     <p>Home</p>
                 </li>
-            </Link>
-            <Link to={'/portfolio'}>
+            </NavLink>
+            <NavLink to={'/portfolio'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
                 <li className='sidebar-item'>
                     <div className='sidebar-icon'>
                         <ClipboardIcon />
                     </div>
                     <p>My Work</p>
                 </li>
-            </Link>
+            </NavLink>
+            <NavLink to={'/about'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
             <li className='sidebar-item'>
                 <div className='sidebar-icon'>
                     <AboutIcon />
                 </div>
                 <p>About</p>
             </li>
-            <Link to={'/contact'}>
+            </NavLink>
+            <NavLink to={'/contact'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
                 <li className='sidebar-item'>
                     <div className='sidebar-icon'>
                         <PhoneIcon />
                     </div>
                     <p>Contact</p>
                 </li>
-            </Link>
+            </NavLink>
 
         </ul>
-        <div className='myName'>
-            <p>L</p>
-            <p>I</p>
-            <p>C</p>
-            <p>H</p>
-            <p>I</p>
-        </div>
+
         <ul className='sidebar-small' hidden>
             <li className='sidebar-item'>1</li>
             <li className='sidebar-item'>2 </li>

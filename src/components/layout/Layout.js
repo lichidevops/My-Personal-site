@@ -2,8 +2,9 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import './Layout.css'
 import Sidebar from '../sidebar/Sidebar'
-
+import '../sidebar/Sidebar.css'
 export default function Layout({children}) {
+  
   return (
     <>
     <div>
@@ -18,7 +19,7 @@ export default function Layout({children}) {
             {children}
             </div>
         </main>
-    </div>
+    </div> 
     </>
   )
 }

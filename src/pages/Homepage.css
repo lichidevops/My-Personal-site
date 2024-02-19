@@ -55,11 +55,34 @@
    color: white ;
 }
 
+.homepage-my-skills{
+    color: white;
+}
+
 .homepage-title{
     color: white;
 }
 .homepage-text-box{
     background-color: #45474B;
-    height: 300px;
+    height: 350px;
     box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.my-skills-layout{
+    display: flex;
+    width: 100%;
+}
+
+.skills-layout-child{
+    padding-left:  10px;
+    padding-right: 10px;
+}
+
+.skills-layout-child p{
+    font-weight: 700;
+}
+
+.skills-layout-child ul li {
+    margin-top: 10px;
+    font-family: monospace;
 }

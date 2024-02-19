@@ -1,10 +1,11 @@
 .sidebar-main {
-    padding:10px 5px;   
+    padding:5px 5px;   
     box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.1);
     /* height: 100%; */
     margin-top: 2px;
     width: 75px;
     position: fixed;
+    background-color: white;
 }
 
 .sidebar-main:hover {
@@ -18,38 +19,10 @@
     display: block;
 }
 
-.sidebar-main:hover ~ .myName p {
-    rotate: 0deg;
-    transition: all 0.5s ease;
-    transform: scale(2.0);
-    /* padding: 0; */
-    width: fit-content;
-}
 
 .sidebar-main:hover ~ .myName {
     display: flex;
     transition: all 0.5s ease;
-}
-
-.myName{
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    bottom: 0;
-    position: fixed;
-}
-
-.myName p{
-    font-size: 12px;
-    padding: 5px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10;
-    rotate: 20deg;
-    width: fit-content;
-    /* padding: 3px; */
 }
 
 .sidebar-item {
@@ -65,6 +38,7 @@
     justify-content: start;
     height: 30px;
     align-items: center;
+    font-weight: bold;
 }
 
 .sidebar-item:hover {
@@ -117,3 +91,9 @@
         transition: all 0.5s ease;
     }
 }
+
+
+.sidebar-main a.active {
+    color: red;
+    font-size: 30px;
+  }
