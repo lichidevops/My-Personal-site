@@ -1,3 +1,7 @@
+.layout{
+    height: 100vh;
+    position:relative
+}
 .header {
   /* Add your styles here */
     position: fixed;
@@ -11,17 +15,20 @@
 
 .main-content {
   /* Add your styles here */
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: grid;
     grid-template-columns: 1fr;
     /* height: 100%;
     width: 100%; */
-    margin-left: 86px;
+    margin-left: 0px;
 }
 
 .side-bar{
     margin: 0;
     padding: 0;
+    position: absolute; 
+    z-index: 200;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 @media screen and (max-width: 540px) {

@@ -4,7 +4,8 @@
     font-weight: bold;
     border: none ;
     padding: 10px 20px;
-    border-radius: 5px;
+    opacity: 100%;
+    /* border-radius: 5px; */
     /* box-shadow: inset 0 0 0 1px #f2f2f2; */
     cursor: pointer;
 }
@@ -13,4 +14,10 @@
     box-shadow: inset 0 0 0 1px #f2f2f2;
     background-color: white;
     transform: scale(0.9);
+}
+
+.button-regular:hover{
+    opacity: 90%;
+    transition: all 0.5s ease;
+    background-color: #26fa05;
 }

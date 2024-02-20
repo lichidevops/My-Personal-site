@@ -1,34 +1,50 @@
 .sidebar-main {
-    padding:5px 5px;   
+    margin: 0;
+    padding-top:30px;
+    padding-left:  5px; 
+    padding-right:  5px;  
+    padding-bottom: 20px; 
     box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    /* height: 100%; */
-    margin-top: 2px;
-    width: 75px;
+    height: 100%;
+    /* margin-top: 50px; */
+    /* margin-top: 2px; */
+    width: 50px;
     position: fixed;
-    background-color: white;
+    background-color: #161A30;
+    /* opacity: 80%; */
+    /* opacity: 40%; */
 }
 
 .sidebar-main:hover {
-    width: 130px;
+    width: 100px;
     transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.sidebar-main:hover .sidebar-item{
+    rotate: 30deg;
+    font-weight: bold;
+    width: 200px;
+    transform: translate(-15%, 30%);
+    padding-left: 30px;
 }
 
 .sidebar-main:hover .sidebar-item p {
     overflow: visible;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     display: block;
 }
-
 
 .sidebar-main:hover ~ .myName {
     display: flex;
     transition: all 0.5s ease;
+    color: white;
 }
 
 .sidebar-item {
-    padding: 10px 10px;
-    margin: 20px 5px;
-    border-radius: 5px;
+    padding: 10px 0px;
+    margin: 6px 0px;
+    /* border-radius: 5px; */
     transition: all 0.5s ease;
     cursor: pointer;
     text-decoration: none;
@@ -42,7 +58,17 @@
 }
 
 .sidebar-item:hover {
-    transition: all 1s ease;
+    transition: all 0.2s ease;
+    background-color: aliceblue;
+    opacity: 100%;
+    color: black;
+}
+
+.sidebar-item {
+    position: relative;
+    overflow: hidden; 
+    /* Essential to contain the rotated ::after within the sidebar-item */
+    /* ... rest of your styles ... */
 }
 
 .sidebar-item div {
@@ -72,16 +98,15 @@
     transform: scale(1.2);
 }
 
-
 .sidebar-item:hover p {
     display: block;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .sidebar-item:hover {
     /* box-shadow:  0 0 10px #000000; */
-    transition: all 0.5s ease;
-    background-color: #f2f2f2;
+    transition: all 0.2s ease;
+    /* background-color: #f2f2f2; */
     cursor: pointer;
 }
 
@@ -92,8 +117,12 @@
     }
 }
 
-
+.sidebar-main a {
+    /* color: #79E0EE; */
+    color: #FFF6E9;
+}
 .sidebar-main a.active {
-    color: red;
+    color: white;
     font-size: 30px;
   }
+  

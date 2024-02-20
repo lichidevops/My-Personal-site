@@ -1,0 +1,26 @@
+.hh-mm-ss{
+    font-size: 25px;
+    /* margin-top: 50px; */
+    margin-left: 70px;
+    color: white;
+    padding: 10px 15px 10px 15px ;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+
+}
+
+.time-display-box{
+    /* background-color: white; */
+    z-index: 200;
+    height: 100px;
+}
+
+.yy-mm-dd{
+    font-size: 18px;
+    /* margin-top: 10px; */
+    margin-left: 70px;
+    color: white;
+    padding: 10px 15px 10px 15px ;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+}

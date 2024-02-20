@@ -1,31 +1,56 @@
+.home-main {
+    margin: 0;
+    padding: 0;
+    /* background-color: #EEF5FF; */
+    height: 100vh;
+    background-image: url('../../public/images/table\ 1.jpg');
+}
+.homepage-header-background h4 {
+    /* margin-top: 70px; */
+    /* margin-top: 0; */
+    margin-left: 70px;
+    box-shadow: inset;
+    color: white;
+    font-size: 40px;
+    padding: 10px 15px 10px 15px ;
+    width: fit-content;
+
+}
 
 .homepage-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 10px;
-    margin-top: -160px;
+    margin:  -230px 0 0 60px ;
+    padding: 0;
 }
 
 @media screen and (max-width: 640px) {
     .homepage-body {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 10px;
+        margin: -260px 0 0 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .homepage-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: -260px 0 0 0;
     }
 }
 
 .homepage-body > div {
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    border: 1px solid #f2f2f2;
+    /* border: 1px solid #f2f2f2; */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
+    border-radius: 5px;
 }
 
 .homepage-body > div:hover {
     transition: all 0.5s ease;
 }
-
 
 .homepage-header{
     display: flex;
@@ -35,54 +60,110 @@
 }
 
 .homepage-header-background{
-    height: 50vh;
+    height: 560px;
     width: 100%;
 }
 
 .homepage-header-background img{
     width: 100%;
-    height: 80%;
+    height: 60%;
     object-fit: cover;
-}
-.homepage-header-background h4 {
-    margin-top: -140px;
-    color: white;
-    font-size: 40px;
-    padding: 20px;
-}
-
-.homepage-about{
-   color: white ;
-}
-
-.homepage-my-skills{
-    color: white;
 }
 
 .homepage-title{
     color: white;
+    margin-top: 0;
+    padding: 0;
 }
+
 .homepage-text-box{
-    background-color: #45474B;
-    height: 350px;
-    box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    overflow: scroll;
+    background-color: black;
+    opacity: 80%;
+    height: 440px;
+    border: solid white;
+    box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.homepage-title h2 {
+    margin: 5px; /* Remove or reduce the top margin */
+    /* Other styling properties */
+    font-family: monospace;
+    opacity: 100%;
+    
 }
 
-.my-skills-layout{
-    display: flex;
+.homepage-about{
+    color: #26fa05 ;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.5;
+    text-align: justify;
+    /* margin: 0px; */
+    font-size: 14px;
+    padding: 5px;
+ }
+ 
+
+.homepage-my-skills{
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.my-skills-title h2{
+    margin: 10px 0 0 10px; /* Remove or reduce the top margin */
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.homepage-my-skills h2{
+    margin-top: 0; /* Remove or reduce the top margin */
+    font-family: monospace;
+    opacity: 100%;
+    
+}
+
+.my-skills-text-box1{
+    display: grid;
+    grid-template-columns: auto auto auto;
     width: 100%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: justify;
+    /* padding: 0;
+    margin: 0; */
 }
 
-.skills-layout-child{
+.my-skills-text-box2{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: justify;
+    /* padding: 0px 10px; */
+}
+
+.skills-child{
     padding-left:  10px;
     padding-right: 10px;
 }
 
-.skills-layout-child p{
+.skills-child p{
     font-weight: 700;
 }
 
-.skills-layout-child ul li {
+.skills-child ul{
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.skills-child ul li {
     margin-top: 10px;
     font-family: monospace;
 }

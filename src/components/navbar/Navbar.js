@@ -21,7 +21,7 @@ export default function Navbar() {
               <li className='navbar-item'>MY WORK</li>
             </NavLink>
             <NavLink to={'/about'}  className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
-              <li className='navbar-item'>ABOUT</li>
+              <li className='navbar-item'>RESUME</li>
             </NavLink>
             <NavLink to={'/contact'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
               <li className='navbar-item'>CONTACT</li>
