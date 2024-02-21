@@ -1,0 +1,73 @@
+
+#profile-balloons{
+    position:relative
+}
+
+.profile-balloon{
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    background-color: #ff4757; /* Balloon color */
+    border-radius: 50%; /* Makes the top round and the bottom slightly pointed */
+    color: white; /* Text color */
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    position: relative;
+    box-shadow:  1px 0 0 1px ;
+    left: 50%; /* Example - adjust based on startLeft prop */
+    bottom: 50%; /* Example - adjust based on height prop */
+    transition: bottom 0.3s ease;
+    overflow: hidden; 
+    color: white;
+}
+/* .reflections{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    right: 45%;
+    bottom: 50%;
+    background: white;
+    opacity: 80%;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  } */
+
+.profile-balloon p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    transform: skew(10deg,10deg);
+    height: fit-content;
+    display: flex;
+}
+
+.profile-balloon .stick {
+    height: 90px;
+    border: solid 1px;
+    position: absolute;
+    margin-top: 140px;
+}
+
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      25% {
+        transform: scale(1.1); /* Slight expansion */
+        opacity: 1;
+      }
+   
+      100% {
+        transform: scale(0); /* Pop */
+        opacity: 0;
+      }
+}
+
+.pop-animation {
+    animation: pop 0.5s forwards;
+}

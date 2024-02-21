@@ -19,6 +19,8 @@
     width: 100px;
     transition: all 0.2s ease;
     overflow: hidden;
+    opacity: 80%;
+
 }
 
 .sidebar-main:hover .sidebar-item{

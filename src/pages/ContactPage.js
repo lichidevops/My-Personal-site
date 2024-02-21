@@ -1,9 +1,10 @@
 import React,{useEffect} from 'react'
 import Layout from '../components/layout/Layout';
 import './ContactPage.css'
+import BusinessCard from './widgets/BusinessCard';
+import ProfileBalloons from './widgets/ProfileBalloons';
 
 export default function ContactPage() {
-
 
   useEffect(()=>{
     document.title = "Contact"
@@ -14,30 +15,13 @@ export default function ContactPage() {
         <div id='contact-page'>
             <div className='contact-main'>
                 <div className='contact-sub1'>
-                    <div className='business-card'>
-
-                        <div className='card-body'>
-                            <div className='card-left'>
-                                <p id='name'>LiChi</p>
-                                <p id='job'>Software Engineer</p>
-                                    
-                            </div>
-                            <div className='card-right'>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className='card-bottom'></div>
-                    </div>
-
+                    <BusinessCard/>
                 </div>
-                <div className='contact-sub2'>
-                    <div className='profile-img'>
-                        <img src='images/DSC_2200.jpg' />
-                    </div>
-                </div>
+                {/* <div className='contact-sub2'> */}
+                    <ProfileBalloons />
+                {/* </div> */}
             </div>
             <div className='contact-footer'>
-
             </div>
         </div>
         </Layout>
