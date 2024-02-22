@@ -14,6 +14,8 @@ export default function () {
   return (
     <>
     <Layout>
+    <div className='portfolio-page'>
+
         <div className='portfolio-body'>
             <BlurryLoading />
             <ExpandingCards />
@@ -25,6 +27,7 @@ export default function () {
             <ScrollAnimation />
             <button>Click Me</button>
         </div>
+    </div>
     </Layout>
     </>
   )

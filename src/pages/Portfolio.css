@@ -3,9 +3,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5px;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 60px;
-    /* position:relative */
+    /* position:relative; */
+
+}
+
+.portfolio-page{
+    background-image: url('../../public/images/table\ 1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 @media screen and (max-width: 640px) {
