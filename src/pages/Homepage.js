@@ -2,7 +2,6 @@ import React,{useEffect} from 'react';
 import Layout from '../components/layout/Layout';
 import './Homepage.css';
 import {Link} from 'react-router-dom';
-import ProgressStep from './widgets/ProgressStep';
 import ButtonRegular from '../components/buttons/ButtonRegular';
 import TimeDisplay from '../components/TimeDisplay/TimeDisplay';
 

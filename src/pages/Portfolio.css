@@ -5,20 +5,45 @@
     padding: 5px;
     margin-top: 60px;
     margin-left: 60px;
+    /* position:relative */
 }
 
-.portfolio-body > div {
+@media screen and (max-width: 640px) {
+    .portfolio-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: -260px 0 0 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .portfolio-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: -260px 0 0 0;
+    }
+}
+
+.portfolio-body > button {
     padding: 20px;
     margin: 3px;
-    border: 1px solid #f2f2f2;
+    /* border: 1px solid #f2f2f2; */
     /* border-radius: 5px; */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    /* cursor: pointer; */
 }
-.portfolio-body > div:hover {
-    transform: scale(1.05);
+.portfolio-body > button:hover {
+    /* transform: scale(1.01); */
     transition: all 0.5s ease;
     cursor: pointer;
     background-color: azure;
+    border: 0;
+}
+
+button{
+    font-weight: bold;
+    font-size: 15px;
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
