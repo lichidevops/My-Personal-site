@@ -1,6 +1,10 @@
 .layout{
     height: 100vh;
-    position:relative
+    position:relative;
+    background-image: url('../../../public/images/table\ 1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header {
   /* Add your styles here */

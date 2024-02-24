@@ -1,6 +1,6 @@
 @import url('http://fonts.googleapis.com/css/family=Muli&display=swap');
 
-.container{
+.expanding-card-container{
     font-family: 'Muli','sans-serif';
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width:480px) {
-    .container{
+    .expanding-card-container{
         width: 100vw;
     }
     .panel:nth-of-type(4), 

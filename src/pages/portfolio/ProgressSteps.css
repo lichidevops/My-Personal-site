@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.progress-steps-body{
+    font-family: 'Nanum Gothic', sans-serif;
+    /* background-color: #f6f7fb; */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    align-items: center;
+}
+
+.progress-steps-container2{
+    text-align: center;
+}
+
+.progress-steps-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    width: 350px;
+    font-size: 20px;
+}
+.progress-steps-container::before{
+    content: "";
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transform: translateY(-50%);
+    /* z-index: -1; */
+}
+
+.progress{
+    background-color: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    /* width: 0%; */
+    transform: translateY(-50%);
+    /* z-index: -1; */
+    transition: .4s ease;
+}
+
+.progress-steps-circle{
+    background-color: white;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    font-weight: bold;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px;
+    transition: .4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-steps-circle.active{
+    border-color: #3498db;
+}
+
+.progress-steps-btn{
+    background-color: #3498db;
+    border: 0;
+    border-radius: 4px;
+    font-family: inherit;
+    padding: 8px 30px;
+    width: 120px;
+    margin: 5px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.progress-steps-btn:active{
+    transform: scale(1.02);
+}
+
+.progress-steps-btn:focus{
+    outline: 0;
+}
+
+.progress-steps-btn:disabled{
+    background-color: #999;
+    cursor: not-allowed;
+}

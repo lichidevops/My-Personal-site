@@ -37,7 +37,7 @@ export default function ExpandingCards() {
   return (
     <>
       <ModalLayout name={"Expanding Cards"} setState={()=>{}} clearState={clearState}>
-        <div className='container'>
+        <div className='expanding-card-container'>
             {
                 panels.map((panel,index)=>{
                     return (
