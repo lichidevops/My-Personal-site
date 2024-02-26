@@ -4,7 +4,8 @@ import ModalLayout from './ModalLayout/ModalLayout';
 export default function RandomChoice() {
   return (
     <>
-    <ModalLayout name={"Random Choice"}>
+    <ModalLayout name={"Random Choice"} setState={()=>{}} clearState={()=>{}}>
+
     </ModalLayout>
     </>
   )

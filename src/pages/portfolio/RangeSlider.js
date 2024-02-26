@@ -4,7 +4,7 @@ import ModalLayout from './ModalLayout/ModalLayout';
 export default function RangeSlider() {
   return (
     <>
-    <ModalLayout name={"Quiz App"}>
+    <ModalLayout name={"Quiz App"} clearState={()=>{}} setState={()=>{}}>
     </ModalLayout>
     </>
   )

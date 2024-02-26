@@ -41,7 +41,7 @@
     }
     .main-body {
         /* Add your styles here */
-          margin-top: 50px;
+          margin-top: 150px;
           /* display: grid;
           grid-template-columns: 1fr; */
           height: 100%;
@@ -49,7 +49,6 @@
       .main-content{
         margin-left: 0px;
     }
-    
 }
 
 @media screen and (max-width: 768px) {

@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .portfolio-body{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 10px;
     margin-top: 40px;
     margin-left: 60px;
@@ -22,6 +23,12 @@
         grid-template-columns: 1fr;
         margin: -260px 0 0 0;
     }
+    .portfolio-page{
+        background-image: url('../../public/images/table\ 1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height:max-content;
+    }
 }
 @media screen and (max-width: 768px) {
     .portfolio-body {
@@ -31,31 +38,4 @@
     }
 }
 
-.portfolio-body > button {
-    padding: 20px;
-    margin: 10px;
-    /* border: 1px solid #f2f2f2; */
-    /* border-radius: 5px; */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
-    font-family: 'Courier New', Courier, monospace;
-    /* cursor: pointer; */
-}
-.portfolio-body > button:hover {
-    transition: all 0.5s ease;
-    cursor: pointer;
-    background-color: azure;
-    border: 0;
-}
 
-.portfolio-body > button:active{
-    transform: scale(1.03);
-}
-
-
-/* button{
-    font-weight: bold;
-    font-size: 15px;
-    border: 0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-} */

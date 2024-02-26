@@ -4,7 +4,7 @@ import ModalLayout from './ModalLayout/ModalLayout';
 export default function QuizApp() {
   return (
     <>
-    <ModalLayout name={"Quiz App"}>
+    <ModalLayout name={"Quiz App"} setState={()=>{}} clearState={()=>{}}>
     </ModalLayout>
     </>
   )

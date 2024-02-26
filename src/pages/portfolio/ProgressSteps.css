@@ -66,6 +66,7 @@
 
 .progress-steps-circle.active{
     border-color: #3498db;
+    color: #3498db;
 }
 
 .progress-steps-btn{

@@ -33,7 +33,7 @@ export default function ModalLayout({name,children, setState,clearState}) {
 
   return (
     <>
-        <button onKeyDown={handleKeyDown} onClick={handleShowModal}>{name}</button>
+        <button className='widget-button' onKeyDown={handleKeyDown} onClick={handleShowModal}>{name}</button>
         <div className={`modal-body ${hidden ? 'hidden' : ''}`}>
             {/* add class 'hidden' or not based on hidden value */}
             <div className='modal-header'>  
