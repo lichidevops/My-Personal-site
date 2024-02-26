@@ -1,0 +1,19 @@
+.notFound-body{
+    margin-left: 60px;
+    padding: 20px;
+    height: 100%;
+    color: white;
+}
+.notFound-title{
+    font-size: 90px;
+    font-weight: bold;
+}
+.notFound-text{
+    font-size: 20px;
+    
+}
+
+#notFound-link{
+    color: white;
+    text-decoration: underline;
+}

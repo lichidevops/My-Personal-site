@@ -26,7 +26,7 @@ export default function Sidebar() {
                 <p>My Work</p>
             </li>
         </NavLink>
-        <NavLink to={'/about'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+        <NavLink to={'/resume'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
         <li className='sidebar-item'>
             <div className='sidebar-icon'>
                 <AboutIcon />

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.wave-form-body{
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wave-form-container{
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.wave-form-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wave-form-container a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.wave-form-control {
+    position:relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.wave-form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px white solid;
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    color: white;
+}
+.wave-form-control input:focus,
+.wave-form-container input:valid{
+    outline: 0;
+}
+
+.wave-form-btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.wave-form-btn:focus{
+    outline: 0;
+}
+
+.wave-form-btn:active{
+    transform: scale(0.98);
+}
+
+.wave-form-text{
+    margin-top: 30px;
+}

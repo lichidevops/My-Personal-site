@@ -9,12 +9,6 @@
 
 }
 
-.time-display-box{
-    /* background-color: white; */
-    z-index: 200;
-    height: 100px;
-}
-
 .yy-mm-dd{
     font-size: 18px;
     /* margin-top: 10px; */
