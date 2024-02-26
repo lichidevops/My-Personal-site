@@ -44,7 +44,6 @@ export default function () {
     <>
     <Layout>
     <div className='portfolio-page'>
-
         <div className='portfolio-body'>
             <BlurryLoading />
             <ExpandingCards />
