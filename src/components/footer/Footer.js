@@ -19,11 +19,21 @@ export default function Footer() {
                 <p>Contact</p>
             </NavLink>
         </div>
-        <div className='footer-column'>
-            <h3>Profile</h3>
+        <div className='footer-column profile'>
+            <div className='footer-profile'>
+                <div className='footer-profile-img'>
+                    <img src='images/DSC_2200.JPG'/>
+                </div>
+                <div className='footer-profile-info'>
+                    <p>LiChi</p>
+                    <p>Seoul</p>
+                    <p>South Korea</p>
+                </div>
+            </div>
         </div>
         <div className='footer-column'>
             <h3>Contact</h3>
+            <p>Email: <span>lchi@dwight.or.kr</span></p>
         </div>
     </div>
   )

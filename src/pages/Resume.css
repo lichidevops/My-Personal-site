@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.resume-body{
+    padding: 20px 200px;
+    height: fit-content;
+    margin-top: 20px;
+    margin-left: 60px;
+    transition: all 0.2s ease;
+}
+#resume-main{
+    background-color: white;
+    border-radius: 5px;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+#resume-dl-button{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 2px 15px;
+    border: none;
+    border-radius: 3px;
+}
+#resume-dl-button:active{
+    transform: scale(1.02);
+    background-color: #365486;
+}
+
+@media screen and (max-width: 1280px) {
+    .resume-body {
+        padding: 20px 100px; /* Retain padding for screens up to 1280px */
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .resume-body {
+        padding: 20px 30px; /* Adjust padding for screens up to 1028px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resume-body {
+        padding: 20px 10px; /* Adjust padding for screens up to 768px */
+        margin-left: 0px;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .resume-body {
+        padding: 20px 10px; /* Adjust padding for screens up to 600px */
+        margin-left: 0px;
+        height: fit-content;
+
+    }
+    #resume-main{
+        background-color: white;
+        border-radius: 5px;
+        padding: 1px;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+    }
+}
+
+
+
+
+/* ---------------------------- Content ----------------------------- */
+
+.resume-content{
+    padding:10px 30px
+}
+
+.resume-content * {
+    color: 'Ubuntu';
+}
+
+.resume-content h2{
+    margin-bottom: 0px;
+}
+.self-intro-row h3{
+    margin-top: 10px;
+    color: #365486;
+}
+
+.experience-brief *{
+    margin: 0px;
+}
+.experience-brief .organization-name{
+    font-family:'Roboto';
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    text-indent: 10px;
+}
+.experience-brief .job-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.experience-brief .place-year{
+    font-family:'Roboto';
+    font-style: italic;
+    font-size: 11px;
+    font-weight: bold;
+    color: #365486;
+    display: flex;
+    justify-content: space-between;
+    text-indent: 10px;
+}
+
+
+.job-bulletin{
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+.experience-row h3 {
+    margin: 8px 0;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------- Sidebar ----------------------------- */
+
+.resume-sidebar{
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+.resume-sidebar div{
+    color: white;
+    margin-bottom: 6px;
+    padding:5px 18px
+}
+
+.contact-row{
+    background-color: #365486;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.contact-row p{
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+.skills-row{
+    background-color: #365486;
+    height: fit-content;
+    border-radius: 5px;
+}
+.skills-row h3{
+    margin: 10px 0;
+}
+hr{
+    padding: 0;
+    margin: 5px 0;
+}
+
+.skills-row >p{
+    margin: 4px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.certificates-row{
+    background-color: #365486;
+    height: fit-content;
+    border-radius: 5px;
+}
+.certificates-row h3{
+    margin: 10px 0;
+    
+}
+.certificates-row p {
+    margin: 8px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.other-skills-row{
+    background-color: #365486;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.other-skills-row  h3{
+    margin: 10px 0;
+}
+
+.other-skills-row p{
+    margin: 8px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.languages-row{
+    background-color: #365486;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.languages-row h3{
+    margin: 10px 0;
+}
+
+.languages-row p{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.resume-content{
+    /* background-color: #B7C9F2; */
+
+}
