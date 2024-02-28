@@ -25,6 +25,8 @@
     border: none;
     border-radius: 3px;
 }
+
+
 #resume-dl-button:active{
     transform: scale(1.02);
     background-color: #365486;
@@ -71,21 +73,27 @@
 
 /* ---------------------------- Content ----------------------------- */
 
-.resume-content{
-    padding:10px 30px
+#self-summary{
+    font-size: 13px;
+    text-align: justify;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    margin-top: 0px;
 }
-
-.resume-content * {
-    color: 'Ubuntu';
+.resume-content{
+    padding:2px 5px 2px 20px;
+    
 }
 
 .resume-content h2{
     margin-bottom: 0px;
 }
 .self-intro-row h3{
-    margin-top: 10px;
+    margin-top: 4px;
     color: #365486;
+    margin-bottom: 4px;
 }
+
+
 
 .experience-brief *{
     margin: 0px;
@@ -101,6 +109,7 @@
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 4px;
+    color: #365486;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -118,9 +127,8 @@
 
 .job-bulletin{
     font-size: 13px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 550;
-    margin-bottom: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    margin-bottom: 3px;
     text-align: justify;
 
 }
@@ -130,12 +138,6 @@
 }
 
 
-
-
-
-
-
-
 /* ---------------------------- Sidebar ----------------------------- */
 
 .resume-sidebar{
@@ -143,27 +145,53 @@
     border-radius: 0 5px 5px 0;
 }
 .resume-sidebar div{
-    color: white;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     padding:5px 18px
 }
 
 .contact-row{
-    background-color: #365486;
+    /* background-color: #365486; */
     height: fit-content;
     border-radius: 5px;
+    color: black;
 }
 
 .contact-row p{
     font-weight: bold;
     font-size: 13px;
+    margin: 5px 0px;
+    font-weight:500;
+}
+.contact-row p span {
+    font-weight: 500;
+}
 
+.education-row{
+    color: white;
+    background-color: #365486;
+    height: fit-content;
+    /* border-radius: 5px; */
+}
+.education-row h3{
+    margin: 10px 0;
+}
+.education-row >p{
+    margin: 4px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.education-row .school-info {
+    padding-left: 10px;
+}
+.education-row .education-year{
+    text-indent: 10px;
 }
 
 .skills-row{
+    color: white;
     background-color: #365486;
     height: fit-content;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 .skills-row h3{
     margin: 10px 0;
@@ -180,9 +208,10 @@ hr{
 }
 
 .certificates-row{
+    color: white;
     background-color: #365486;
     height: fit-content;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 .certificates-row h3{
     margin: 10px 0;
@@ -195,9 +224,10 @@ hr{
 }
 
 .other-skills-row{
+    color: white;
     background-color: #365486;
     height: fit-content;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .other-skills-row  h3{
@@ -211,9 +241,10 @@ hr{
 }
 
 .languages-row{
+    color: white;
     background-color: #365486;
     height: fit-content;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .languages-row h3{
@@ -223,6 +254,7 @@ hr{
 .languages-row p{
     font-weight: bold;
     font-size: 13px;
+    margin: 5px 0;
 }
 
 .resume-content{

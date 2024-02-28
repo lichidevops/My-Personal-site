@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useRef, useState} from 'react';
 import Layout from '../components/layout/Layout';
 import './Homepage.css';
 import {Link} from 'react-router-dom';
@@ -6,16 +6,35 @@ import ButtonRegular from '../components/buttons/ButtonRegular';
 import TimeDisplay from '../components/TimeDisplay/TimeDisplay';
 
 export default function Homepage() {
+    const [selfIntro, setSelfIntro] = useState("");
 
-useEffect(()=>{
-    document.title = "Home - LiChi"
-    },[])
+    const introText = " I'm a self-taught web developer with a journey that spans over three years into the ever-evolving world of technology. My foray into programming started out of sheer curiosity, but it quickly blossomed into a deep-seated passion that drives me every day. Through countless hours of learning, experimenting, and building, I've honed my skills in crafting web applications that are not only functional but also intuitive and engaging.\n I cherish the creative process involved in programming — from conceptualizing an idea to bringing it to life through code. It's a form of art to me, one that allows for endless expression and innovation. The thrill of solving complex problems and the satisfaction of seeing a project come together are what drive my love for web development.";
+    let typeIndex = useRef(0);
+    let intervalRef = useRef(null)
+    const typeSpeed = 10;
+
+
+
+    useEffect(()=>{
+        document.title = "Home - LiChi";
+
+        intervalRef.current = setInterval(() => {
+            if(typeIndex.current < introText.length){
+                typeIndex.current ++;
+                setSelfIntro((prev)=> prev + introText.charAt(typeIndex.current));
+            }
+            else{
+                clearInterval(intervalRef.current)
+            }
+        }, typeSpeed);
+
+        return ()=>clearInterval(intervalRef.current)
+        },[selfIntro])
   return (
     <>
     <Layout>
     <div className='home-main'>
         <div className='homepage-header'>
-            <h4>Welcome</h4>
             <TimeDisplay/>
         </div>
         <div className='homepage-main'>
@@ -25,18 +44,9 @@ useEffect(()=>{
                         <h2>Hi there, I'm a Web Developer</h2>
                     </div>
                     <div className='homepage-about'>
-                        <p>
-                            I'm a self-taught web developer with a journey that spans over three years into the ever-evolving world of technology. My foray into programming started out of sheer curiosity, but it quickly blossomed into a deep-seated passion that drives me every day. Through countless hours of learning, experimenting, and building, I've honed my skills in crafting web applications that are not only functional but also intuitive and engaging.
-                        </p>
-                        <p>
-                            I cherish the creative process involved in programming—from conceptualizing an idea to bringing it to life through code. It's a form of art to me, one that allows for endless expression and innovation. The thrill of solving complex problems and the satisfaction of seeing a project come together are what drive my love for web development.
-                        </p>
+                        <p>{selfIntro}</p>
                     </div>
-                    <div className='homepage-cta'>
-                        <Link to={'/portfolio'}>
-                            <ButtonRegular className='homepage-cta-button'>View My Work</ButtonRegular>
-                        </Link>
-                    </div>
+
                 </div>
 
                 <div className='homepage-text-box'>
@@ -87,6 +97,11 @@ useEffect(()=>{
                                 <li>Tailwind </li>
                             </ul>
                         </div>
+                    </div>
+                    <div className='homepage-cta'>
+                        <Link to={'/portfolio'}>
+                            <ButtonRegular className='homepage-cta-button'>View My Work</ButtonRegular>
+                        </Link>
                     </div>
                 </div>
             </div>

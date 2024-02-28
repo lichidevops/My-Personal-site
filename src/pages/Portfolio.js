@@ -43,7 +43,6 @@ export default function () {
   return (
     <>
     <Layout>
-    <div className='portfolio-page'>
         <div className='portfolio-body'>
             <BlurryLoading />
             <ExpandingCards />
@@ -83,7 +82,6 @@ export default function () {
             <VerifyAccountUI />
             <ButtonRipple />
         </div>
-    </div>
     </Layout>
     </>
   )

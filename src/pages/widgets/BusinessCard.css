@@ -1,15 +1,13 @@
 .business-card{
-    margin-left: 30px;
-    /* rotate: -4deg; */
     box-shadow: 0 2px 2px 0 ;
     border-radius: 5px;
     padding: 15px;
-    margin-bottom: 10px;
     background-color:#F5F5F5;
     transform: translate(1%, 8%);
     width:430px;
     height:250px;
     box-shadow: 3px 3px ;
+    margin: 0;
 }
 
 .card-body{
@@ -45,11 +43,12 @@
 }
 
 
-.business-card:hover{
+/* .business-card:hover{
     rotate: 0deg;
-    /* transform: translate(1%, 8%); */
+    transform: translate(1%, 8%);
     transition: all 0.4s ease;
-}
+} */
+
 .card-body{
     display: grid;
     grid-template-columns: auto auto auto;

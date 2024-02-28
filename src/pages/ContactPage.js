@@ -13,16 +13,10 @@ export default function ContactPage() {
     <>
         <Layout>
         <div id='contact-page'>
-            <div className='contact-main'>
-                <div className='contact-sub1'>
-                    <BusinessCard/>
-                </div>
-                {/* <div className='contact-sub2'> */}
-                    <ProfileBalloons />
-                {/* </div> */}
-            </div>
-            <div className='contact-footer'>
-            </div>
+            <BusinessCard/>
+          {/* <div className='contact-sub2'> */}
+              {/* <ProfileBalloons /> */}
+          {/* </div> */}
         </div>
         </Layout>
     </>

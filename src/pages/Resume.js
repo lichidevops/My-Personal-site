@@ -12,11 +12,11 @@ export default function ResumePage() {
       duration:"2020-2024",
       location:"Seoul, South Korea",
       jobDetails:[
-        
         "Developed a School Morning Bulletin Delivery System utilizing Apps Script, integrating spreadsheets and Google Docs for automated content distribution",
         "Created and launched a School Online Spirit Store using Python and Flask, for merchandise sales and community engagement.",
+        "Implemented a system for cross-referencing Google Form responses with automatic email reminders to enhance data management and communication efficiency",
         "Implemented Staff Birthday Email Automation via Apps Script, enhancing organizational culture with personalized communication",
-        "Created a UCC University Visit Booking System with React, Node.js, and MySQL, streamlining the process for scheduling campus visits for prospective students",
+        "Currently Developing a UCC University Visit Booking System with React, Node.js, and MySQL, streamlining and simplifying the process for scheduling campus visits for prospective students",
         "Developed and implemented curriculum for International Baccalaureate Diploma Programme (IBDP) Computer Science course."
       ]},
     {
@@ -27,7 +27,8 @@ export default function ResumePage() {
       jobDetails:[
         "Delivered engaging lessons using diverse teaching methods to foster critical thinking and problem-solving skills",
         "Developed comprehensive curriculum for Chinese language classes, catering to students from diverse backgrounds.",
-        "Implemented dynamic design class programs, fostering a creative learning environment."
+        "Implemented dynamic design class programs, fostering a creative learning environment.",
+        "Led yearbook design and coordination, blending creative layouts with meticulous project management to craft memorable annual publications."
       ]},
     {
       title:"AP Chinese Teacher",
@@ -36,7 +37,6 @@ export default function ResumePage() {
       location:"Yangon, Myanmar",
       jobDetails:[
         "Designed engaging lesson plans that emphasized cultural immersion, critical thinking, and language application, leading to notable student achievements in AP exams.",
-        "Fostered a supportive and interactive classroom environment that encouraged student participation and facilitated a deeper understanding of Chinese culture.",
         "Delivered high-quality instruction and significantly improving students' proficiency in Mandarin."
       ]
     },
@@ -46,17 +46,18 @@ export default function ResumePage() {
       duration:"2012-2014",
       location:"Nakuru, Kenya",
       jobDetails:[
-        "",
-        "",
-        "",
-        ""
+        "Designed and delivered a comprehensive Chinese language curriculum at Confucius Institute, Egerton University, enriching Nakuru's diverse community through education and cultural exchange initiatives.",
+        "Championed diversity by bridging cultural gaps, leveraging events to deepen mutual understanding between the communities.",
       ]
     },
   ])
 
   const [skills, setSkills] = useState([
-    "Javascript","Python","Java","Dart","Node.js","MySQL","Git","Flask","Flutter","Swift","AppsScript"
+    "Javascript","Python","Java","Dart","React.js","Node.js","MySQL","MongoDB","Flask","Flutter","Swift","AppsScript","Git"
   ]);
+  const [education,setEducation] = useState([
+    {degree:"B.A",major:"Linguistics",year:2012,school:"National University of Mongolia"}
+  ])
   const [certificates, setCertificates] = useState([
     "AWS DevOps Engineer Professional",
     "AWS Associates",
@@ -66,7 +67,8 @@ export default function ResumePage() {
     "Microsoft Office",
     "Google Workspace",
     "Adobe Photoshop, Illustrator, InDesign", "Design & Publishing","Curriculum Design",
-    "Photography"
+    "Photography",
+    "Teaching"
   ]);
   const [languages, setLangauges] = useState([
     "English - Fluent",
@@ -83,6 +85,26 @@ export default function ResumePage() {
         {
           items.map((item,index)=>{
             return <p key={index}>{item}</p>
+          })
+        }
+      </>
+    )
+  }
+  
+  const generateEducationColumn = (title,items)=>{
+    return (
+      <>
+        <h3>{title}</h3>
+        <hr></hr>
+        {
+          items.map((item)=>{
+            return (
+              <>
+              <p className='degree-info'>{item.degree} - {item.major}</p>
+              <p className='school-info'>- {item.school}</p>
+              <p className='education-year'>- {item.year}</p>
+              </>
+            )
           })
         }
       </>
@@ -105,15 +127,14 @@ export default function ResumePage() {
   },)
   return (
     <Layout>
-
         <div className='resume-body'>
           <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
           <div id='resume-main'>
             <div className='resume-content'>
               <div className='self-intro-row'>
                 <h2>LiChi</h2>
-                <h3><i>Web Developer</i></h3>
-                <p>self-driven, motivated, life-long learner</p>
+                <h3>Web Developer</h3>
+                <p id='self-summary'>Dedicated and self-driven professional with a global perspective, combining creativity, resilience, and adaptability. A lifelong learner known for consistent, hardworking ethos, resourceful problem-solving, and strong communication and teamwork skills.</p>
               </div>
               <hr/>
               <div className='experience-row'>
@@ -138,40 +159,38 @@ export default function ResumePage() {
                             )
                         })}
                         </ul>
-
                       </div>
                       </div>
                     )
                   })
                 }
-                <div className='experience'>
-                  <div 
-                  className='experience-detail'>
-                  </div>
-                </div>
               </div>
-              <div className='Education-row'></div>
             </div>
 
             <div className='resume-sidebar'>
-              <div className='contact-row'>
+              {/* <div className='contact-row'>
                 <p>Email: <span>lichi.liqi@gmail.com</span></p>
                 <p>Telephone:<span>010-8913-0910</span></p>
                 <p>Location:<span>Seoul, South Korea</span></p>
                 <p>Personal Page:<span>lycheelichi.com</span></p>
                 <p>LinkedIn <span><a href='https://www.linkedin.com/in/li-chi-80627454/'>LinkedIn</a></span></p>
+              </div> */}
+              <div className='education-row'>
+                {generateEducationColumn("EDUCATION",education)}
               </div>
               <div className='skills-row'>
-                {generateSkillColumn("SKILLS",skills)}
+                {generateSkillColumn("PROGRAMMING",skills)}
               </div>
+
               <div className='certificates-row'>
                 {generateSkillColumn("CERTIFICATES",certificates)}
               </div>
-              <div className='other-skills-row'>
-                {generateSkillColumn("Other Skills",otherSkills)}
-              </div>
               <div className='languages-row'>
                 {generateSkillColumn("Languages",languages)}
+                
+              </div>
+              <div className='other-skills-row'>
+                {generateSkillColumn("Other Skills",otherSkills)}
               </div>
             </div>
           </div>

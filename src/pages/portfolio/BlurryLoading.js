@@ -19,7 +19,7 @@ export default function BlurryLoading() {
   useEffect(()=>{
     if(!startLoading) return;
     const loadText = document.querySelector('.loading-text');
-    const bg = document.querySelector('.bg');
+    const bg = document.querySelector('.blurryBg');
 
     let interval =  setInterval(()=>{
       setPercentage((prevPercentage) => {
@@ -39,7 +39,7 @@ export default function BlurryLoading() {
   return (
     <>
     <ModalLayout name={"Blurry Loading"} setState={()=>setStartLoading(true)} clearState={()=>clearState()}>
-     <div className='bg'>
+     <div className='blurryBg'>
       <div className='loading-text'>{percentage}%</div>
      </div>
     </ModalLayout>

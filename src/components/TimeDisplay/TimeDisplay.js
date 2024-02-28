@@ -24,8 +24,11 @@ export default function TimeDisplay() {
   return (
     <>
     <div className='time-display-box'>
-        <h5 className='hh-mm-ss'> {time}</h5>
-        <h5 className='yy-mm-dd'>{formattedDate}</h5>
+        <p className='welcome'>Welcome</p>
+        <div className='time-date'>
+          <p className='yy-mm-dd'>{formattedDate}</p>
+          <p className='hh-mm-ss'> {time}</p>
+        </div>
     </div>
     </>
   )

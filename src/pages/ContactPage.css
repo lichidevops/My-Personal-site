@@ -1,46 +1,33 @@
 #contact-page{
     /* background-color: antiquewhite; */
-}
-
-.contact-main {
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    padding: 10px;
-    /* background-color: #f2f2f2; */
-    height: 100vh;
-    margin-top: 60px;
     margin-left: 60px;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-sub1 {
-    padding: 0px;
+.contact-card{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 30px;
+    border: solid 2px white;
 }
 .contact-sub2 {
     padding: 20px;
 }
 
 @media screen and (max-width:640px) {
-    .contact-main{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
     .contact-sub1{
         height: fit-content;
-        padding-bottom: 50px;
-        margin-bottom: 0;
     }
 }
 @media screen and (max-width:768px) {
-    .contact-main{
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-left: 0px;
-    }
     .contact-sub1{
         height: fit-content;
-        padding-bottom: 50px;
-        margin-bottom: 0;
     }
 }
 
