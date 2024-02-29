@@ -8,12 +8,12 @@ import TimeDisplay from '../components/TimeDisplay/TimeDisplay';
 export default function Homepage() {
     const [selfIntro, setSelfIntro] = useState("");
 
-    const introText = " I'm a self-taught web developer with a journey that spans over three years into the ever-evolving world of technology. My foray into programming started out of sheer curiosity, but it quickly blossomed into a deep-seated passion that drives me every day. Through countless hours of learning, experimenting, and building, I've honed my skills in crafting web applications that are not only functional but also intuitive and engaging.\n I cherish the creative process involved in programming — from conceptualizing an idea to bringing it to life through code. It's a form of art to me, one that allows for endless expression and innovation. The thrill of solving complex problems and the satisfaction of seeing a project come together are what drive my love for web development.";
+    const introText = 
+        " I'm a self-taught web developer, deeply immersed in a journey of learning, building, and exploring the ever-evolving landscape of technology. \n I can: \n - Develop backend systems, laying the groundwork for strong, scalable applications. \n - Design and implement frontend interfaces with aesthetics for a user-friendly experience in mind. \n - build mobile applications. \n Driven by curiosity and a relentless pursuit of excellence, I continuously seek to expand my skillset and tackle new challenges, and bring my unique blend of skills and perspective to a team that values innovation and creativity."
+    ;
     let typeIndex = useRef(0);
     let intervalRef = useRef(null)
     const typeSpeed = 10;
-
-
 
     useEffect(()=>{
         document.title = "Home - LiChi";
@@ -44,7 +44,9 @@ export default function Homepage() {
                         <h2>Hi there, I'm a Web Developer</h2>
                     </div>
                     <div className='homepage-about'>
-                        <p>{selfIntro}</p>
+                        <p>
+                            {selfIntro.split('\n').map((line, index, array) =>index === array.length - 1 ? <span key={index}>{line}</span> : <span key={index}>{line}<br /><br/></span>)}
+                        </p>
                     </div>
 
                 </div>

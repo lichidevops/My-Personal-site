@@ -2,86 +2,138 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.resume-body{
-    padding: 20px 200px;
-    height: fit-content;
+.resume-page{
+    padding: 0px 20px;
+    height: auto;
+    width: auto;
     margin-top: 20px;
     margin-left: 60px;
     transition: all 0.2s ease;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#resume-main{
+
+
+#resume-paper{
+    transform-origin: top left;
     background-color: white;
-    border-radius: 5px;
-    padding: 1px;
+    padding: 3px;
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    height: 1056px;
+    width: 816px;
+    box-sizing: border-box;
+    margin-left: 50px;
 }
 
 #resume-dl-button{
     font-weight: bold;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    height: fit-content;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
     padding: 2px 15px;
     border: none;
+    width: fit-content;
     border-radius: 3px;
 }
-
 
 #resume-dl-button:active{
     transform: scale(1.02);
     background-color: #365486;
 }
 
-@media screen and (max-width: 1280px) {
-    .resume-body {
-        padding: 20px 100px; /* Retain padding for screens up to 1280px */
+@media screen and (max-width:768px) {
+    .resume-page{
+        margin: 5px;
+        padding: 0px 0px;
     }
-}
-
-@media screen and (max-width: 1028px) {
-    .resume-body {
-        padding: 20px 30px; /* Adjust padding for screens up to 1028px */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .resume-body {
-        padding: 20px 10px; /* Adjust padding for screens up to 768px */
+    #resume-paper{
         margin-left: 0px;
+    }
+    #resume-dl-button{
+        margin-left: 0px;
+    }
+}
+/* 
+@media screen and (min-width: 1280px) {
+    .resume-body {
+        padding: 20px 100px; 
+    }
+    .resume-main{
+        width: fit-content;
+    }
+}
 
+@media screen and (min-width: 1024px) {
+    .resume-body {
+        padding: 20px 30px; 
+        width: fit-content;
+
+    }
+    .resume-main{
+        width: 816px;
+        height: 1056px;
+        overflow: scroll;
+        transform: scale(calc(100vw / 1024));
+    }
+}
+@media screen and (min-width: 800px) {
+    .resume-body {
+        padding: 20px 30px; 
+        width: fit-content;
+
+    }
+    .resume-main{
+        width: 816px;
+        height: 1056px;
+        overflow: scroll;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .resume-body {
+        padding: 20px 70px;
+        margin-left: 0px;
+        width: fit-content;
+
+    }
+    .resume-main{
+        width: 816px;
+        height: 1056px;
+        overflow: scroll;
+        transform: scale(calc(100vw / 768));
     }
 }
 
 @media screen and (max-width: 600px) {
     .resume-body {
-        padding: 20px 10px; /* Adjust padding for screens up to 600px */
+        padding: 20px 10px; 
         margin-left: 0px;
         height: fit-content;
-
+        overflow: scroll;
+        width: fit-content;
+    
     }
-    #resume-main{
-        background-color: white;
-        border-radius: 5px;
-        padding: 1px;
-        /* display: grid; */
-        /* grid-template-columns: 1fr; */
+    .resume-main{
+        transform: scale(calc(100vw / 1024));
     }
-}
-
-
-
+} */
 
 /* ---------------------------- Content ----------------------------- */
 
 #self-summary{
-    font-size: 13px;
+    font-size: 12px;
     text-align: justify;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
     margin-top: 0px;
 }
 .resume-content{
-    padding:2px 5px 2px 20px;
-    
+    padding:2px 15px 2px 20px;
 }
 
 .resume-content h2{
@@ -92,8 +144,6 @@
     color: #365486;
     margin-bottom: 4px;
 }
-
-
 
 .experience-brief *{
     margin: 0px;
@@ -124,36 +174,33 @@
     text-indent: 10px;
 }
 
-
 .job-bulletin{
-    font-size: 13px;
+    font-size: 12px;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
     margin-bottom: 3px;
     text-align: justify;
-
 }
 
 .experience-row h3 {
     margin: 8px 0;
 }
 
-
 /* ---------------------------- Sidebar ----------------------------- */
 
 .resume-sidebar{
-    padding: 10px;
+    padding: 0px;
     border-radius: 0 5px 5px 0;
 }
 .resume-sidebar div{
-    margin-bottom: 3px;
-    padding:5px 18px
+    margin-bottom: 5px;
+    padding:9px 18px
 }
 
 .contact-row{
-    /* background-color: #365486; */
+    background-color: #365486;
     height: fit-content;
-    border-radius: 5px;
-    color: black;
+    /* border-radius: 5px; */
+    color: white;
 }
 
 .contact-row p{

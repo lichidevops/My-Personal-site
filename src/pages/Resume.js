@@ -90,7 +90,7 @@ export default function ResumePage() {
       </>
     )
   }
-  
+
   const generateEducationColumn = (title,items)=>{
     return (
       <>
@@ -112,13 +112,17 @@ export default function ResumePage() {
   }
 
   const generatePDF = () => {
-    const element = document.getElementById("resume-main");
-    const options = {
-      filename: 'LiChi Resume.pdf', // Set custom filename here
+    const element = document.getElementById("resume-paper");
+    const opt = {
+      filename: 'LiChi Resume.pdf', 
+     
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+      margin:0
   };
+  console.log("Download?")
     html2pdf()
         .from(element)
-        .set(options)
+        .set(opt)
         .save();
 };
 
@@ -127,9 +131,9 @@ export default function ResumePage() {
   },)
   return (
     <Layout>
-        <div className='resume-body'>
+        <div className='resume-page'>
           <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
-          <div id='resume-main'>
+          <div id='resume-paper'>
             <div className='resume-content'>
               <div className='self-intro-row'>
                 <h2>LiChi</h2>
@@ -171,9 +175,7 @@ export default function ResumePage() {
               {/* <div className='contact-row'>
                 <p>Email: <span>lichi.liqi@gmail.com</span></p>
                 <p>Telephone:<span>010-8913-0910</span></p>
-                <p>Location:<span>Seoul, South Korea</span></p>
                 <p>Personal Page:<span>lycheelichi.com</span></p>
-                <p>LinkedIn <span><a href='https://www.linkedin.com/in/li-chi-80627454/'>LinkedIn</a></span></p>
               </div> */}
               <div className='education-row'>
                 {generateEducationColumn("EDUCATION",education)}

@@ -10,7 +10,8 @@ export default function Layout({children}) {
   return (
     <>
     <div className='layout'>
-        <div className='header'>
+        <div id='header'>
+          <Navbar />
         </div>
         <div className='main-body'>
             <div className='side-bar'>

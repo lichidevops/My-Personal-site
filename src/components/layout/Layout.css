@@ -10,14 +10,15 @@
     background-attachment: fixed; 
 }
 
-.header {
+#header {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     z-index: 100;
+    margin-left: 0;
 }
 
 main{
@@ -54,18 +55,6 @@ main{
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 480px) {
-    .side-bar{
-        display: none;
-    }
-      .main-content{
-        margin-left: 0px;
-    }
-    .layout{
-        background-position: center;
-        background-repeat: repeat-y;
-    }
-}
 
 @media screen and (max-width: 768px) {
     .side-bar {
@@ -88,5 +77,20 @@ main{
         background-position: center;
         background-repeat: repeat-y;
     }
+    #header{
+        display:block
+    }
 }
 
+@media screen and (max-width: 480px) {
+    .side-bar{
+        display: none;
+    }
+      .main-content{
+        margin-left: 0px;
+    }
+    .layout{
+        background-position: center;
+        background-repeat: repeat-y;
+    }
+}

@@ -1,12 +1,12 @@
 .business-card{
     box-shadow: 0 2px 2px 0 ;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 15px;
     background-color:#F5F5F5;
     transform: translate(1%, 8%);
     width:430px;
     height:250px;
-    box-shadow: 3px 3px ;
+    box-shadow: 5px 5px;
     margin: 0;
 }
 
