@@ -8,7 +8,7 @@ export default function BusinessCard() {
             <div className='card-left'>
                 <div>
                     <p id='name'>LiChi</p>
-                    <p id='job'>Software Engineer / Computer Science Teacher / Design Teacher / Chinese Teacher</p>
+                    <p id='job'>Web Developer / Computer Science Teacher / Design Teacher / Chinese Teacher</p>
 
                 </div>
             </div>

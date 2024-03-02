@@ -91,7 +91,6 @@
     padding-right: 30px;
 }
 
-
 #navbar-dropdown-menu{
     background-color: black;
     opacity: 0.8;
@@ -99,7 +98,7 @@
     position: absolute;
     right: 0; /* Align the menu to the right side of the navbar-dropdown */
     top: 100%; /* Position the dropdown right below the button */
-    width: 150px; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
     border-radius: 5px;
     box-sizing: border-box;
 }

@@ -1,0 +1,42 @@
+#scroll-animation-page{
+    background-color: #efedd6;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#scroll-anime-h1{
+    margin: 10px;
+}
+
+.scroll-anime-box{
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    transform: translateX(200%);
+    transition: transform 0.4s ease-in;
+}
+
+.scroll-anime-box h3{
+    font-size: 30px;
+}
+
+
+.scroll-anime-box:nth-of-type(even){
+    transform: translateX(-200%);
+}
+
+.scroll-anime-box.show{
+    transform: translateX(0);
+}
+
