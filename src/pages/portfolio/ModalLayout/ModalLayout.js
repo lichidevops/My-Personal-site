@@ -33,14 +33,14 @@ export default function ModalLayout({name,children, setState,clearState}) {
                 clearState(); 
             }, 500);
         }
-
     }
 
     const handleClose = ()=>{
         setHidden(true)
-        setTimeout(() =>  clearState(), 500);       // function drilling - child to clear state
-    }
+        setTimeout(() =>  clearState(), 500); 
 
+    }
+    
     const handleKeyDown = (e)=>{
         e.preventDefault();
 
