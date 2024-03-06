@@ -48,11 +48,12 @@ export default function () {
             <ExpandingCards />
             <RotatingNavigation />
             <HiddenSearch />
+            <ButtonRipple />
             <ProgressSteps />
-            <QuizApp />
-            <SplitLandingPage />
-            <ScrollAnimation />
             <AnimatedNavigation />
+            <SplitLandingPage />
+            <QuizApp />
+            {/* <ScrollAnimation />
             <BackgroundBoxes />
             <MovieApp />
             <TodoList />
@@ -79,8 +80,7 @@ export default function () {
             <EventKeyCode />
             <ContentPlaceholder />
             <StickyNavbar />
-            <VerifyAccountUI />
-            <ButtonRipple />
+            <VerifyAccountUI /> */}
         </div>
     </Layout>
     </>

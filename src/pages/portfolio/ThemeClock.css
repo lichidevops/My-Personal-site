@@ -1,0 +1,130 @@
+#theme-clock-body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+#theme-clock-body{
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+#theme-clock-body{
+    transition: all 0.5s ease-in;
+}
+
+#theme-clock-body.dark{
+    --primary-color: #fff;
+    --secondary-color: #333;
+}
+
+#theme-clock-body.dark{
+    background-color: #111;
+    columns: var(--primary-color);
+    color: white;
+}
+
+.theme-clock-toggle{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    top: 100px;
+}
+
+.theme-clock-toggle:focus{
+    outline: none;
+}
+
+.theme-clock-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-clock{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+.clock-needle{
+    background-color: var(--primary-color);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    /* transition: all 0.5s ease-in; */
+}
+
+.clock-needle.hour{
+    transform:translate(-50%,-100%) rotate(0deg);
+}
+
+.clock-needle.minute{
+    transform:translate(-50%,-100%) rotate(0deg);
+    height: 100px;
+}
+
+.clock-needle.second{
+    transform:translate(-50%,-100%) rotate(0deg);
+    height: 100px;
+    background-color: #e74c3c
+}
+
+.center-point{
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+}
+
+.center-point::after{
+    content: '';
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.clock-time{
+    font-size: 60px;
+}
+
+.clock-date{
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.clock-date .theme-clock-circle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease-in;
+    font-size: 12px;
+}   

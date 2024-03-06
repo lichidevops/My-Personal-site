@@ -1,10 +1,12 @@
-import React,{useRef, useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import './ModalLayout.css'
 
 export default function ModalLayout({name,children, setState,clearState}) {
     
     const [hidden, setHidden] = useState(true);
     const buttonRef = useRef(null);
+    const waveTimeRef = useRef(null);
+    const modalRef = useRef(null);
 
     const handleShowModal = (e)=>{
         const x = e.clientX;
@@ -17,19 +19,19 @@ export default function ModalLayout({name,children, setState,clearState}) {
         const yInside = y - buttonTop;
 
         const circle = document.createElement('span');
-        
         circle.classList.add('widget-button-circle');
         circle.style.top = yInside + 'px';
         circle.style.left = xInside + 'px';
 
-        buttonRef.current.appendChild(circle)
-        setTimeout(()=>circle.remove(), 500);
+        buttonRef.current.appendChild(circle);
+
+        waveTimeRef.current = setTimeout(()=>circle.remove(), 500);
 
         setHidden(!hidden);
         if(hidden){
             setState();
         }else {
-            setTimeout(() => {
+            modalRef.current = setTimeout(() => {
                 clearState(); 
             }, 500);
         }
@@ -37,18 +39,27 @@ export default function ModalLayout({name,children, setState,clearState}) {
 
     const handleClose = ()=>{
         setHidden(true)
-        setTimeout(() =>  clearState(), 500); 
-
+        modalRef.current = setTimeout(() =>  clearState(), 500); 
     }
     
     const handleKeyDown = (e)=>{
         e.preventDefault();
-
         if(e.key === "Escape"){
             setHidden(true)
-            clearState();   // function drilling - child to clear state
+            clearState();
         }
     }
+
+    useEffect(() => {
+
+        return () => {
+            clearTimeout(waveTimeRef.current);
+            if(modalRef.current){
+                clearTimeout(modalRef.current);
+            }
+        }
+    }
+    , [])
 
   return (
     <>
@@ -58,7 +69,6 @@ export default function ModalLayout({name,children, setState,clearState}) {
             onKeyDown={handleKeyDown} 
             onClick={handleShowModal}>
                 {name}
-                
             </button>
 
         <div className={`modal-body ${hidden ? 'hidden' : ''}`}>
@@ -68,8 +78,8 @@ export default function ModalLayout({name,children, setState,clearState}) {
                 <p className='modal-name'>{name}</p>
             </div>
 
-            <div className='modal-children'>
-            <div className='modal-rim'>
+            <div className='modal-children' onKeyDown={handleKeyDown} >
+            <div className='modal-rim' >
                 {children}
             </div>
         </div>

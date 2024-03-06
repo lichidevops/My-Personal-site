@@ -17,7 +17,8 @@ export default function ResumePage() {
         "Implemented a system for cross-referencing Google Form responses with automatic email reminders to enhance data management and communication efficiency",
         "Implemented Staff Birthday Email Automation via Apps Script, enhancing organizational culture with personalized communication",
         "Currently Developing a UCC University Visit Booking System with React, Node.js, and MySQL, streamlining and simplifying the process for scheduling campus visits for prospective students",
-        "Developed and implemented curriculum for International Baccalaureate Diploma Programme (IBDP) Computer Science course."
+        "Developed and implemented curriculum for International Baccalaureate Diploma Programme (IBDP) Computer Science course.",
+        "Utilized Google Sheets based applications for comprehensive student data management, including tracking grades, collecting, cleaning, and visualizing data, developed user-friendly tools for efficient data search and viewing, enhancing accessibility and usability."
       ]},
     {
       title:"Chinese Teacher / Design Teacher",
@@ -62,7 +63,8 @@ export default function ResumePage() {
     "AWS DevOps Engineer Professional",
     "AWS Associates",
     "Teaching Certificate"
-  ])
+  ]);
+  
   const [otherSkills, setOtherSkills] = useState([
     "Microsoft Office",
     "Google Workspace",
@@ -97,13 +99,13 @@ export default function ResumePage() {
         <h3>{title}</h3>
         <hr></hr>
         {
-          items.map((item)=>{
+          items.map((item,itemIndex)=>{
             return (
-              <>
+              <div key={itemIndex}>
               <p className='degree-info'>{item.degree} - {item.major}</p>
               <p className='school-info'>- {item.school}</p>
               <p className='education-year'>- {item.year}</p>
-              </>
+              </div>
             )
           })
         }
@@ -115,89 +117,87 @@ export default function ResumePage() {
     const element = document.getElementById("resume-paper");
     const opt = {
       filename: 'LiChi Resume.pdf', 
-     
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
       margin:0
   };
-  console.log("Download?")
     html2pdf()
-        .from(element)
-        .set(opt)
-        .save();
+      .from(element)
+      .set(opt)
+      .save();
 };
 
   useEffect(()=>{
     document.title = "Resume"
   },)
+
   return (
     <Layout>
-        <div className='resume-page'>
-          <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
-          <div id='resume-paper'>
-            <div className='resume-content'>
-              <div className='self-intro-row'>
-                <h2>LiChi</h2>
-                <h3>Web Developer</h3>
-                <p id='self-summary'>Dedicated and self-driven professional with a global perspective, combining creativity, resilience, and adaptability. A lifelong learner known for consistent, hardworking ethos, resourceful problem-solving, and strong communication and teamwork skills.</p>
-              </div>
-              <hr/>
-              <div className='experience-row'>
-                <h3>WORK EXPERIENCE</h3>
-                {
-                  experiences.map((experience,index)=>{
-                    return (
-                      <div key={index}>
-                      <div className='experience-brief'>
-                        <p className='job-title'>{experience.title}</p>
-                        <p className='organization-name'>{experience.organization}</p>
-                        <div className='place-year'>
-                          <p className='job-duration'>{experience.duration}</p>
-                          <p className='job-location'>{experience.location}</p>
-                        </div>
-                      </div>
-                      <div className='job-details'>
-                        <ul>
-                        {experience.jobDetails.map((bulletin,detailIndex)=>{
-                            return (
-                              <li className='job-bulletin' key={detailIndex}>{bulletin}</li>
-                            )
-                        })}
-                        </ul>
-                      </div>
-                      </div>
-                    )
-                  })
-                }
-              </div>
+      <div id='resume-page'>
+        <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
+        <div id='resume-paper'>
+          <div className='resume-content'>
+            <div className='self-intro-row'>
+              <h2>LiChi</h2>
+              <h3>Web Developer</h3>
+              <p id='self-summary'>Dedicated and self-driven professional with a global perspective, combining creativity, resilience, and adaptability. A lifelong learner known for consistent, hardworking ethos, resourceful problem-solving, and strong communication and teamwork skills.</p>
             </div>
-
-            <div className='resume-sidebar'>
-              {/* <div className='contact-row'>
-                <p>Email: <span>lichi.liqi@gmail.com</span></p>
-                <p>Telephone:<span>010-8913-0910</span></p>
-                <p>Personal Page:<span>lycheelichi.com</span></p>
-              </div> */}
-              <div className='education-row'>
-                {generateEducationColumn("EDUCATION",education)}
-              </div>
-              <div className='skills-row'>
-                {generateSkillColumn("PROGRAMMING",skills)}
-              </div>
-
-              <div className='certificates-row'>
-                {generateSkillColumn("CERTIFICATES",certificates)}
-              </div>
-              <div className='languages-row'>
-                {generateSkillColumn("Languages",languages)}
-                
-              </div>
-              <div className='other-skills-row'>
-                {generateSkillColumn("Other Skills",otherSkills)}
-              </div>
+            <hr/>
+            <div className='experience-row'>
+              <h3>WORK EXPERIENCE</h3>
+              {experiences.map((experience,index)=>{
+                return (
+                  <div key={index}>
+                  <div className='experience-brief'>
+                    <p className='job-title'>{experience.title}</p>
+                    <p className='organization-name'>{experience.organization}</p>
+                    <div className='place-year'>
+                      <p className='job-duration'>{experience.duration}</p>
+                      <p className='job-location'>{experience.location}</p>
+                    </div>
+                  </div>
+                  <div className='job-details'>
+                    <ul>
+                    {experience.jobDetails.map((bulletin,detailIndex)=>{
+                        return (
+                          <li className='job-bulletin' key={detailIndex}>{bulletin}</li>
+                        )
+                    })}
+                    </ul>
+                  </div>
+                  </div>
+                )
+                })
+              }
             </div>
           </div>
-          <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
+
+          <div className='resume-sidebar'>
+            {/* <div className='contact-row'>
+              <p>Email: <span>lichi.liqi@gmail.com</span></p>
+              <p>Telephone:<span>010-8913-0910</span></p>
+              <p>Personal Page:<span>lycheelichi.com</span></p>
+            </div> */}
+            <div id='education-row'>
+              {generateEducationColumn("EDUCATION",education)}
+            </div>
+            <div className='skills-row'>
+              {generateSkillColumn("PROGRAMMING",skills)}
+            </div>
+
+            <div className='certificates-row'>
+              {generateSkillColumn("CERTIFICATES",certificates)}
+            </div>
+            <div className='languages-row'>
+              {generateSkillColumn("Languages",languages)}
+              
+            </div>
+            <div className='other-skills-row'>
+              {generateSkillColumn("Other Skills",otherSkills)}
+            </div>
+          </div>
         </div>
+        <button onClick={generatePDF} id='resume-dl-button'>Download as PDF</button>
+      </div>
     </Layout>
   )
 }
