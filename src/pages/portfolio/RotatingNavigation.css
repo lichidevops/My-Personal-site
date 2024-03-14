@@ -7,7 +7,6 @@
     overflow: hidden;
     margin: 0;
     position: relative;
-
 }
 
 .rotating-nav-container {
@@ -74,18 +73,18 @@
     transform: rotate(-15deg);
 }
 
-.rotatinNav{
+.rotatingNav{
     position: fixed;
     color: white;
-    bottom: 80px;
-    left: 5%;
+    bottom: 30px;
+    overflow: hidden;
 }
 
-.rotatinNav ul {
-    padding-left: 40px;
+.rotatingNav ul {
+    padding-left: 10px;
 }
 
-.rotatinNav ul li {
+.rotatingNav ul li {
     list-style: none;
     text-transform: uppercase;
     margin: 40px 0;
@@ -93,17 +92,17 @@
     transition: transform 0.4s ease-in;
 }
 
-.rotatinNav ul li * {
+.rotatingNav ul li * {
     margin-right: 10px;
 }
 
-.rotatinNav ul li + li {
+.rotatingNav ul li + li {
     margin-left: 20px;
     transform: translateX(-150%);
 
 }
 
-.rotatinNav ul li + li + li {
+.rotatingNav ul li + li + li {
     margin-left: 40px ;
     transform: translateX(-200%);
 

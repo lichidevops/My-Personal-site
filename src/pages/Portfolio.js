@@ -39,6 +39,7 @@ import ContentPlaceholder from './portfolio/ContentPlaceholder'
 import StickyNavbar from './portfolio/StickyNavbar';
 import VerifyAccountUI from './portfolio/VerifyAccountUI';
 import ButtonRipple from './portfolio/ButtonRipple';
+import BackgroundSlider from './portfolio/BackgroundSlider';
 export default function () {
   return (
     <>
@@ -56,16 +57,18 @@ export default function () {
             <AnimatedNavigation />
             <SplitLandingPage />
             <QuizApp />
+            <IncrementCounter />
+            <BackgroundSlider />
+            
             {/* <ScrollAnimation />
             <BackgroundBoxes />
             <MovieApp />
             <TodoList />
             <SoundBoard />
             <FormWave />
-            <IncrementCounter />
+            
             <InsectCatch />
             <KineticLoader />
-            <BackgroundBoxes />
             <LiveUserFilter />
             <NetflixNav />
             <RandomImage />
