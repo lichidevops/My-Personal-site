@@ -5,7 +5,7 @@
     width: 92%;
     height: 90vh;
     box-shadow: 0 20px 30px 0 rgba(10, 9, 9, 0.1);
-    margin: 10px 10px 0px 80px;
+    /* margin: 10px 10px 0px 80px; */
     transition: all 0.6s ease;
     background-color: rgb(238, 238, 238);
     border: solid 5px rgb(171, 171, 171);
@@ -23,32 +23,33 @@
         width: 90%;
         margin-top: 210px;
         height: 90vh;
-        margin: 10px 10px 10px 70px;
+        margin: 10px 10px 10px 10px;
     }
 }
 
 @media screen and (max-width: 1028px) {
     .modal-body {
-        width: 90%;
+        width: 100%;
         margin-top: 210px;
         height: 90vh;
-        margin: 10px 20px 10px 70px;
+        margin: 10px 20px 10px 10px;
     }
 }
 @media screen and (max-width: 940px) {
     .modal-body {
-        width: 90%;
+        width: 100%;
         margin-top: 210px;
         height: 90vh;
-        margin: 10px 10px 10px 70px;
+        margin: 10px 10px 10px 10px;
     }
 }
+
 @media screen and (max-width: 768px) {
     .modal-body {
         width: 90%;
         margin-top: 210px;
         height: 85vh;
-        margin: 10px 10px 10px 20px;
+        margin: 10px 10px 10px 10px;
     }
 }
 
@@ -58,7 +59,7 @@
         margin-top: 210px;
         height: 85vh;
         /* margin-right: 0px; */
-        margin: 10px 10px 10px 20px;
+        margin: 10px 10px 10px 10px;
 
     }
 }

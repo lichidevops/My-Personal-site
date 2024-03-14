@@ -43,7 +43,10 @@ export default function () {
   return (
     <>
     <Layout>
-        <div className='portfolio-body'>
+      <div id='portfolio-page'>
+      <h2 id='portfolio-title'>Frontend Work </h2>
+
+        <div id='portfolio-body'>
             <BlurryLoading />
             <ExpandingCards />
             <RotatingNavigation />
@@ -82,6 +85,7 @@ export default function () {
             <StickyNavbar />
             <VerifyAccountUI /> */}
         </div>
+      </div>
     </Layout>
     </>
   )

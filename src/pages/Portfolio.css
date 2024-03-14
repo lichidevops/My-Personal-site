@@ -1,29 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-.portfolio-body{
+#portfolio-page{
+    padding: 0px 140px;
+    height: 100vh;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+    overflow: auto;
+}
+#portfolio-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+#portfolio-body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 20px;
-    padding: 20px 100px;
     position: relative;
 }
 
 @media screen and (max-width: 480px) {
-    .portfolio-body {
+    #portfolio-body {
         display: grid;
         grid-template-columns: 1fr ;
         margin: 0 5px 5px 0;
         margin-top: 40px;
         padding: 20px 50px;
     }
+    #portfolio-page{
+        padding: 0px 10px;
+    }
 }
 @media screen and (max-width: 768px) {
-    .portfolio-body {
+    #portfolio-body {
         display: grid;
         grid-template-columns: 1fr;
         margin: 0 5px 5px 0;
         padding: 20px 30px;
-
+    }
+    #portfolio-page{
+        padding: 0px 10px;
     }
 }
 

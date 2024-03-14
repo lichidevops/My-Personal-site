@@ -1,7 +1,9 @@
 #homepage-page {
-    margin-left: 60px;
     height: 100vh;
-    padding: 0px 50px;
+    padding: 0px 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .homepage-header{
