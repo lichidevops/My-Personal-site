@@ -1,6 +1,7 @@
-.home-main {
-    margin: 5px;
-    height: 100%;
+#homepage-page {
+    margin-left: 60px;
+    height: 100vh;
+    padding: 0px 50px;
 }
 
 .homepage-header{
@@ -10,63 +11,21 @@
     transition: all 0.5s ease;
     width: fit-content;
     height: fit-content;
-    margin: 0;
-    margin-left: 110px;
-    position: relative;
-}
-
-.homepage-header h4 {
-    box-shadow: inset;
-    color: white;
-    font-size: 40px;
-    padding: 10px 15px 0px 15px ;
-    width: fit-content;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.homepage-main {
+    margin-bottom: 10px;
     margin-top: 30px;
+    position: relative;
+
 }
 
 .homepage-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     padding: 0;
-}
-
-@media screen and (max-width: 1028px) {
-    .homepage-body {
-        margin-left: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .homepage-body {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 0 0 0;
-        height: fit-content;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .homepage-body {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 0 0 0;
-    }
-}
-
-.homepage-body > div {
-    padding: 10px;
-    margin: 0 50px;
-    /* border: 1px solid #f2f2f2; */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-    border-radius: 5px;
 }
+
+
 
 .homepage-body > div:hover {
     transition: all 0.5s ease;
@@ -81,21 +40,34 @@
 }
 
 .homepage-text-box{
-    
     overflow: scroll;
+    margin: 2px 5px;
     background-color: black;
     opacity: 80%;
+    padding: 10px;
     height: fit-content;
     border: solid white;
     box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: height 0.5 ease-in;
+    border-radius: 5px;
+    transition: all 0.5s ease;
 }
 
-.homepage-title h2 {
+
+.homepage-title {
     margin: 5px; /* Remove or reduce the top margin */
     /* Other styling properties */
     font-family: monospace;
     opacity: 100%;
+}
+
+.text-box-title{
+    /* Other styling properties */
+    padding: 10px 0; /* Remove or reduce the top margin */
+    
+    font-family: monospace;
+    opacity: 100%;
+    color: white;
 }
 
 .homepage-about{
@@ -171,4 +143,48 @@
 .skills-child ul li {
     margin-top: 10px;
     font-family: monospace;
+}
+
+
+
+@media screen and (max-width: 1028px) {
+    
+    #homepage-page {
+        margin-left: 60px;
+        height: 100%;
+        padding: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        height: fit-content;
+    }
+    #homepage-page {
+        margin-left: 0px;
+        height: 100%;
+        padding: 0px 10px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .homepage-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    #homepage-page {
+        margin-left: 0px;
+        height: 100%;
+        padding: 0px 10px;
+    }
+    .homepage-text-box{
+        margin: 2px 0px;
+    }
 }

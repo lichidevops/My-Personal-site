@@ -44,8 +44,8 @@
 }
 
 @media screen and (max-width:768px) {
-    .resume-page{
-        padding: 0px 0px;
+    #resume-page{
+        padding: 10px 10px;
         margin-left: 0px;
     }
     #resume-paper{

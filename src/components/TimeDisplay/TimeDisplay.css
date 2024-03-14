@@ -1,9 +1,7 @@
 
 .hh-mm-ss{
     font-size: 25px;
-    /* margin-top: 50px; */
     color: white;
-    /* padding: 10px 15px 10px 15px ; */
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     margin-top: 0;
@@ -12,9 +10,7 @@
 
 .yy-mm-dd{
     font-size: 18px;
-    /* margin-top: 10px; */
     color: white;
-    /* padding: 10px 15px 10px 15px ; */
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     margin-top: 0;

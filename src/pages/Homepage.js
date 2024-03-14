@@ -33,78 +33,71 @@ export default function Homepage() {
   return (
     <>
     <Layout>
-    <div className='home-main'>
+    <div id='homepage-page'>
         <div className='homepage-header'>
             <TimeDisplay/>
         </div>
-        <div className='homepage-main'>
-            <div className='homepage-body'>
-                <div className='homepage-text-box'>
-                    <div className='homepage-title'>
-                        <h2>Hi there, I'm a Web Developer</h2>
-                    </div>
-                    <div className='homepage-about'>
-                        <p>
-                            {selfIntro.split('\n').map((line, index, array) =>index === array.length - 1 ? <span key={index}>{line}</span> : <span key={index}>{line}<br /><br/></span>)}
-                        </p>
-                    </div>
-
+        <div className='homepage-body'>
+            <div className='homepage-text-box'>
+                <h2 className='text-box-title'>Hi there, I'm a Web Developer</h2>
+                <div className='homepage-about'>
+                    <p>
+                        {selfIntro.split('\n').map((line, index, array) =>index === array.length - 1 ? <span key={index}>{line}</span> : <span key={index}>{line}<br /><br/></span>)}
+                    </p>
                 </div>
+            </div>
 
-                <div className='homepage-text-box'>
-                    <div className='my-skills-title'>
-                        <h2>What I know:</h2>
-                    </div>
-                    <div className='my-skills-text-box1'>
-                        <div className='skills-child'>
-                            <p>Programming Languages</p>
-                                <ul>
-                                    <li>Javascript</li>
-                                    <li>Python</li>
-                                    <li>Java</li>
-                                    <li>Dart</li>
-                                    <li>Javascript</li>
-                                </ul>
-                        </div>
-                        <div className='skills-child'>
-                            <p>Frontend</p>
+            <div className='homepage-text-box'>
+                <h2 className='text-box-title'>What I know:</h2>
+                <div className='my-skills-text-box1'>
+                    <div className='skills-child'>
+                        <p>Programming Languages</p>
                             <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>Dart</li>
+                                <li>Javascript</li>
                             </ul>
-                        </div>
-                        <div className='skills-child'>
-                            <p>Backend</p>
-                            <ul>
-                                <li>Node.js</li>
-                                <li>Python Flask</li>
-                                <li>SQL</li>
-                                <li>NoSQL</li>
-                            </ul>
-                        </div>
                     </div>
-                    <div className='my-skills-text-box2'>
-                        <div className='skills-child'>
-                            <p>Mobile </p>
-                            <ul>
-                                <li>Flutter </li>
-                            </ul>
-                        </div>
-                        <div className='skills-child'>
-                            <p>Frameworks / Library </p>
-                            <ul>
-                                <li>React </li>
-                                <li>Vue </li>
-                                <li>Bootstrap </li>
-                                <li>Tailwind </li>
-                            </ul>
-                        </div>
+                    <div className='skills-child'>
+                        <p>Frontend</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
                     </div>
-                    <div className='homepage-cta'>
-                        <Link to={'/portfolio'}>
-                            <ButtonRegular className='homepage-cta-button'>View My Work</ButtonRegular>
-                        </Link>
+                    <div className='skills-child'>
+                        <p>Backend</p>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python Flask</li>
+                            <li>SQL</li>
+                            <li>NoSQL</li>
+                        </ul>
                     </div>
+                </div>
+                <div className='my-skills-text-box2'>
+                    <div className='skills-child'>
+                        <p>Mobile </p>
+                        <ul>
+                            <li>Flutter </li>
+                        </ul>
+                    </div>
+                    <div className='skills-child'>
+                        <p>Frameworks / Library </p>
+                        <ul>
+                            <li>React </li>
+                            <li>Vue </li>
+                            <li>Bootstrap </li>
+                            <li>Tailwind </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='homepage-cta'>
+                    <Link to={'/portfolio'}>
+                        <ButtonRegular className='homepage-cta-button'>View My Work</ButtonRegular>
+                    </Link>
                 </div>
             </div>
         </div>

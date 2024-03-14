@@ -24,7 +24,6 @@ export default function TimeDisplay() {
   return (
     <>
     <div className='time-display-box'>
-        <p className='welcome'>Welcome</p>
         <div className='time-date'>
           <p className='yy-mm-dd'>{formattedDate}</p>
           <p className='hh-mm-ss'> {time}</p>
