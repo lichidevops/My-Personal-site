@@ -39,9 +39,10 @@ export default function BlurryLoading() {
   return (
     <>
     <ModalLayout name={"Blurry Loading"} setState={()=>setStartLoading(true)} clearState={()=>clearState()}>
-     <div className='blurryBg'>
-      <div className='loading-text'>{percentage}%</div>
-     </div>
+    <div className='loading-text'>{percentage}%</div>
+    <div className='blurryBg'>
+    </div>
+
     </ModalLayout>
     </>
   )

@@ -18,6 +18,7 @@
     z-index: 200;
 }
 
+
 @media screen and (max-width: 1280px) {
     .modal-body {
         width: 90%;

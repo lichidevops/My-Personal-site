@@ -59,7 +59,8 @@ export default function () {
             <QuizApp />
             <IncrementCounter />
             <BackgroundSlider />
-            
+            <FAQ />
+
             {/* <ScrollAnimation />
             <BackgroundBoxes />
             <MovieApp />
@@ -77,7 +78,6 @@ export default function () {
             <TestimonialBox />
             <ThemeClock />
             <PasswordStrength />
-            <FAQ />
             <FeedbackUI />
             <DrinkWater />
             <DragDrop />

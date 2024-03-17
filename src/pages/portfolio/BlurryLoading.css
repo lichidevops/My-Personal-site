@@ -1,3 +1,12 @@
+#blurryBg-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
 .blurryBg{
     background: url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F16829c67-4166-4451-9934-6d02c210bdf7.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1');
 
@@ -7,14 +16,14 @@
     justify-content: center;
     align-items: center;
     overflow:hidden;
-    height: 60vh;
-    width: 90vw;
-    /* z-index:-1; */
+    height: 100%;
+    width: 100%;
     filter: blur(100px);
+    z-index:-1;
 }
 
 .loading-text {
-    color: white;
+    color: black;
     font-size: 60px;
     font-weight: bold;
     z-index:200;
