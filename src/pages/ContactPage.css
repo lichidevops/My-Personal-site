@@ -32,14 +32,13 @@
 
 #frequentQuestions{
     margin: 40px auto;
-    width:430px;
+    width: 430px;
     padding: 10px;
 }
 
 .frequentQ{
     background-color: #f0f0f0;
     opacity: 0.9;
-    padding: 20px;
     margin: 20px 0px;
     border-radius: 6px;
     position: relative;
@@ -52,11 +51,16 @@
     background-color: white;
     opacity: 1;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    
 }   
 
 .frequentQ-title{
     margin: 0 35px 0 0 ;
     font-size: 15px;
+    padding: 8px 15px;
+    width: 100%;
+    background-color: rgb(216, 250, 250);
+    opacity: 0.7;
 }
 
 .frequentQ-answer{
@@ -68,8 +72,10 @@
 .frequentQ.active .frequentQ-answer{
     display: block;
     font-size: 14px;
-    padding-left: 10px;
+    padding-left: 15px;
     transition: all 0.5s ease;
+    font-weight: bold;
+    color: rgb(25, 20, 124);
 }
 
 .frequentQ-toggle{
@@ -82,7 +88,7 @@
     font-size: 16px;
     padding: 0;
     position: absolute;
-    top:10px;
+    top:2px;
     right: 30px;
     height: 30px;
     width: 30px;

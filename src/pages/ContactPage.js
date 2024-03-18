@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Layout from '../components/layout/Layout';
 import './ContactPage.css'
 import BusinessCard from './widgets/BusinessCard';
-import ProfileBalloons from './widgets/ProfileBalloons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faX } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,6 +17,7 @@ export default function ContactPage() {
     {qIndex:5, question:"What coding languages do I know??",status:"",answer:"I know JS, Python, Java, Dart, Swift!"},
     {qIndex:6, question:"What frameworks or libraries have I used?",status:"",answer:"React, Flutter, Flask, Node, Express.js, etc"},
     {qIndex:7, question:"Frontend or backend?",status:"",answer:"both, more backend please!"},
+    {qIndex:8, question:"Am I eligible to work in US?",status:"",answer:"Yes"},
   ]);
 
   const handleFaqActive = (faqIndex)=>{
