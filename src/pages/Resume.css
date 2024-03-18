@@ -213,10 +213,10 @@
     height: fit-content;
     /* border-radius: 5px; */
 }
+
 #education-row h3{
     margin: 10px 0;
 }
-
 
 #education-row .degree-info{
     margin: 4px 5px;
@@ -320,5 +320,24 @@ hr{
     }
     #resume-dl-button{
         margin-left: 0px;
+    }
+    #self-summary{
+        font-size: 11px;
+    }
+    .resume-sidebar{
+        font-size: 11px;
+    }
+    .experience-brief .organization-name{
+        font-size: 11px;
+    }
+    .experience-brief .job-title{
+        font-size: 11px;
+    }
+    .experience-brief .place-year{
+        font-size: 11px;
+    }
+    .job-bulletin{
+        font-size: 11px;
+
     }
 }
