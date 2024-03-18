@@ -51,6 +51,7 @@
     #resume-paper{
         margin-left: 0px;
         height:fit-content;
+        overflow: scroll;
     }
     #resume-dl-button{
         margin-left: 0px;
