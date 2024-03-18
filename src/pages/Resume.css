@@ -307,7 +307,7 @@ hr{
     margin: 5px 0;
 }
 
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 593px) {
     #resume-page{
         padding: 10px 10px;
         margin-left: 0px;
@@ -316,7 +316,6 @@ hr{
         margin-left: 0px;
         height:fit-content;
         overflow: scroll;
-        font-size: 12px;
     }
     #resume-dl-button{
         margin-left: 0px;
@@ -337,6 +336,6 @@ hr{
         font-size: 11px;
     }
     .job-bulletin{
-        font-size: 11px;
+        font-size: 10px;
     }
 }
