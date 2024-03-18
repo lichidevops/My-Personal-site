@@ -50,11 +50,13 @@
     }
     #resume-paper{
         margin-left: 0px;
+        height:fit-content;
     }
     #resume-dl-button{
         margin-left: 0px;
     }
 }
+
 /* 
 @media screen and (min-width: 1280px) {
     .resume-body {
