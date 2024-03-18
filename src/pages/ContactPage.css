@@ -20,19 +20,11 @@
     padding: 20px;
 }
 
-@media screen and (max-width:768px) {
-    #contact-page{
-        margin-left: 0px;
-        padding: 0px 10px;
-    }
-    .contact-sub1{
-        height: fit-content;
-    }
-}
+
 
 #frequentQuestions{
     margin: 40px auto;
-    width: 330px;
+    width: 430px;
     padding: 10px;
 }
 
@@ -97,3 +89,19 @@
 .frequentQ.active .frequentQ-toggle{
     transform: rotate(180deg);
 }   
+
+@media screen and (max-width:768px) {
+    #contact-page{
+        margin-left: 0px;
+        padding: 0px 10px;
+    }
+    .contact-sub1{
+        height: fit-content;
+    }
+    #frequentQuestions{
+        margin: 40px auto;
+        width: 330px;
+        padding: 10px;
+    }
+    
+}

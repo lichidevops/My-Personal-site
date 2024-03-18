@@ -3,8 +3,8 @@
     padding: 15px;
     background-color:#F5F5F5;
     transform: translate(1%, 8%);
-    width:330px;
-    height:200px;
+    width:430px;
+    height:230px;
     box-shadow: 5px 5px;
     margin: 0;
 }
@@ -64,6 +64,8 @@
     .business-card{
         margin-left: 0px;
         padding: 15px;
+        width:330px;
+        height:200px;
     }
 }
 
