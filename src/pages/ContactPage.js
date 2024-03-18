@@ -46,13 +46,16 @@ export default function ContactPage() {
               return (
                 <>
                   <div key={question.qIndex} className={`frequentQ ${question.status}`} onClick={()=>{handleFaqActive(question.qIndex)}}>
-                      <h3 className='frequentQ-title'>{question.question}</h3>
+                      <div className='frequentQ-title'>
+                        <p className='frequentQ-question'>{question.question}</p>
+                        <button className='frequentQ-toggle' >
+                        <FontAwesomeIcon icon={faChevronDown}/>
+                      </button>
+                      </div>
                       <p className='frequentQ-answer'>
                         {question.answer}
                       </p>
-                      <button className='frequentQ-toggle' >
-                      <FontAwesomeIcon icon={faChevronDown}/>
-                      </button>
+
                   </div>
                 </>
               )
